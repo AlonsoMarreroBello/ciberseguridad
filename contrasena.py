@@ -8,7 +8,10 @@ def comprobar_longitud(contrasena):
   return len(contrasena) >= 8
 
 
-print("Longitud válida:", comprobar_longitud(contrasena))
-print("¿Contiene números? (fija):", comprobar_numero(contrasena))
-print("Prueba sin números ('Hola'):", comprobar_numero("Hola"))
-print("Prueba con números ('Clave123'):", comprobar_numero("Clave123"))
+def comprobar_mayuscula(contrasena):
+  return any(caracter.isupper() for caracter in contrasena)
+
+
+print("1. Longitud (>=8):", comprobar_longitud(contrasena))
+print("2. Contiene números:", comprobar_numero(contrasena))
+print("3. Contiene mayúsculas:", comprobar_mayuscula(contrasena))
