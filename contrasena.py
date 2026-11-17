@@ -1,3 +1,5 @@
+from utilidades import comprobar_numero
+
 contrasena = "Hola1234"
 print(contrasena)
 
@@ -6,10 +8,7 @@ def comprobar_longitud(contrasena):
   return len(contrasena) >= 8
 
 
-# Llamada con la contraseña fija y pruebas
-print("Contraseña fija:", comprobar_longitud(contrasena))
-print("Prueba < 8 caracteres ('abc'):", comprobar_longitud("abc"))
-print(
-    "Prueba >= 8 caracteres ('ContrasenaSegura'):",
-    comprobar_longitud("ContrasenaSegura"),
-)
+print("Longitud válida:", comprobar_longitud(contrasena))
+print("¿Contiene números? (fija):", comprobar_numero(contrasena))
+print("Prueba sin números ('Hola'):", comprobar_numero("Hola"))
+print("Prueba con números ('Clave123'):", comprobar_numero("Clave123"))
