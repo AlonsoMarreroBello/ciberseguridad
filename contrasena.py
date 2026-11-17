@@ -5,7 +5,7 @@ print(contrasena)
 
 
 def comprobar_longitud(contrasena):
-  return len(contrasena) >= 10
+  return len(contrasena) >= 12
 
 
 def comprobar_mayuscula(contrasena):
@@ -15,3 +15,7 @@ def comprobar_mayuscula(contrasena):
 print("1. Longitud (>=8):", comprobar_longitud(contrasena))
 print("2. Contiene números:", comprobar_numero(contrasena))
 print("3. Contiene mayúsculas:", comprobar_mayuscula(contrasena))
+
+print("Prueba 10 caracteres:", comprobar_longitud("1234567890"))
+print("Prueba 11 caracteres:", comprobar_longitud("12345678901"))
+print("Prueba 12 caracteres:", comprobar_longitud("123456789012"))
